@@ -1,9 +1,37 @@
 {
+  "extends": [
+    "config:base",
+    "default:enableVulnerabilityAlerts",
+    "default:ignoreModulesAndTests",
+    "default:pinVersions",
+    "default:prHourlyLimit2",
+    "docker:disable"
+  ],
   "packageRules": [
-  {
+    {
+      "packagePatterns": ["*"],
+      "enabled": false
+    },
+    {
+      "depTypeList": ["devDependencies"],
+      "enabled": true,
+      "automerge": true,
+      "major": {
+        "automerge": false
+      },
+      "prConcurrentLimit": 10,
+      "rebaseStalePrs": true
+    },
+    {
+      "extends": ["default:automergeMinor"],
+      "packagePatterns": "^@fortawesome",
+      "groupName": "fortawesome dependencies",
+      "enabled": true
+    },
+    {
       "extends": ["monorepo:react", "default:automergeMinor"],
       "groupName": "react monorepo",
       "enabled": true
-    }
-    ]
+    },
+  ]
 }
