@@ -1,12 +1,4 @@
 {
-  "extends": [
-    "config:base",
-    "default:enableVulnerabilityAlerts",
-    "default:ignoreModulesAndTests",
-    "default:pinVersions",
-    "default:prHourlyLimit2",
-    "docker:disable"
-  ],
   "packageRules": [
     {
       "packagePatterns": ["*"],
