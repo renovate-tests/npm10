@@ -1,0 +1,9 @@
+{
+  "packageRules": [
+  {
+      "extends": ["monorepo:react", "default:automergeMinor"],
+      "groupName": "react monorepo",
+      "enabled": true
+    }
+    ]
+}
