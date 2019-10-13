@@ -5,7 +5,7 @@
       "enabled": false
     },
     {
-      "extends": ["monorepo:react", "default:automergeMinor"],
+      "extends": ["monorepo:react"],
       "groupName": "react monorepo",
       "enabled": true
     }
